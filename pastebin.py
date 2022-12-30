@@ -11,7 +11,7 @@ PASTEBIN_USERNAME = os.getenv('PASTEBIN_USERNAME')
 PASTEBIN_PASSWORD = os.getenv('PASTEBIN_PASSWORD')
 PASTEBIN_API_KEY = os.getenv('PASTEBIN_API_KEY')
 
-def paste(title, content) -> tuple:
+def pastebin(title, content) -> tuple:
     PASTEBIN_LOGIN_URL = 'https://pastebin.com/api/api_login.php'
     PASTEBIN_POST_URL = 'https://pastebin.com/api/api_post.php'
     #* Creating An 'api_user_key' Using The API Member Login System
@@ -49,4 +49,4 @@ def paste(title, content) -> tuple:
     else:
         return (False, pb_paste_response.text)
 
-#  paste('Sample agogeio Title', b'Sample agogeio Content')
+#  pastebin('Sample agogeio Title', b'Sample agogeio Content')
